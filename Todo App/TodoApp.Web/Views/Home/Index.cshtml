@@ -1,8 +1,68 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<TodoTask>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Панель справа -->
+        <div class="col-md-2">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+                <a class="nav-link" id="v-pills-tasks-tab" data-toggle="pill" href="#v-pills-tasks" role="tab" aria-controls="v-pills-tasks" aria-selected="false">Task List</a>
+                <a class="nav-link" id="v-pills-about-tab" data-toggle="pill" href="#v-pills-about" role="tab" aria-controls="v-pills-about" aria-selected="false">About</a>
+            </div>
+        </div>
+
+        <!-- Основное содержимое -->
+        <div class="col-md-10">
+            <div class="tab-content" id="v-pills-tabContent">
+                <!-- Домашняя страница -->
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <h2>Todo List</h2>
+                </div>
+                <!-- Инпут -->
+                <div class="col-md-8 w-100">
+                    <div class="input-group mb-3 mt-5">
+                        <input type="text" class="form-control" placeholder="Add new task">
+                        <a  class="btn btn-outline-secondary">Add Task</a>
+                    </div>
+                </div>
+                <br/>
+                <table class="table table-bordered table-striped" style="width:100%">
+                    <thead>
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Actions
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach(var task in Model)
+                    {
+                        <tr>
+                            <td width="10%">
+                                @task.Id
+                            </td>
+                            <td width="70%">
+                                @task.Name
+                            </td>
+                            <td>
+                                <div class="w-100 btn-group" role="group">
+                                    <a asp-controller="" asp-action="" asp-route-id="@task.Id"
+                                       class="btn btn-primary mx-1"> <i class="bi bi-check-circle-fill"></i></a>
+                                    <a asp-controller="" asp-action="" asp-route-id="@task.Id"
+                                       class="btn btn-danger mx-1"> <i class="bi bi-trash-fill"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>

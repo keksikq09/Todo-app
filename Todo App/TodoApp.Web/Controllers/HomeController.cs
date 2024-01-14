@@ -1,21 +1,26 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Todo_App.Models;
+using Todo.App.Model.Models;
+using TodoApp.Data.Repository.IRepository;
 
 namespace Todo_App.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly IUnitOfWork _unitOfWork;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork)
     {
         _logger = logger;
+        _unitOfWork = unitOfWork;
     }
 
     public IActionResult Index()
     {
-        return View();
+        IEnumerable<TodoTask> tasks = _unitOfWork.TodoTask.GetAll();
+        return View(tasks);
     }
 
     public IActionResult Privacy()

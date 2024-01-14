@@ -5,13 +5,14 @@ namespace TodoApp.Data.Repository;
 
 public class UnitOfWork : IUnitOfWork
 {
-    public ITodoTaskRepository TodoTask { get; }
+    public ITodoTaskRepository TodoTask { get; private set; }
     
     private readonly ApplicationDbContext _db;
 
     public UnitOfWork(ApplicationDbContext db)
     {
         _db = db;
+        TodoTask = new TodoTaskRepository(_db);
     }
     
     public void Save()

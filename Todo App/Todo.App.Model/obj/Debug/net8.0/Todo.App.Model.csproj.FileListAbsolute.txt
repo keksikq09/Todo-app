@@ -1,0 +1,12 @@
+C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\bin\Debug\net8.0\Todo.App.Model.deps.json
+C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\bin\Debug\net8.0\Todo.App.Model.dll
+C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\bin\Debug\net8.0\Todo.App.Model.pdb
+C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\obj\Debug\net8.0\Todo.App.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\obj\Debug\net8.0\Todo.App.Model.AssemblyInfoInputs.cache
+C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\obj\Debug\net8.0\Todo.App.Model.AssemblyInfo.cs
+C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\obj\Debug\net8.0\Todo.App.Model.csproj.CoreCompileInputs.cache
+C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\obj\Debug\net8.0\Todo.App.Model.sourcelink.json
+C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\obj\Debug\net8.0\Todo.App.Model.dll
+C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\obj\Debug\net8.0\refint\Todo.App.Model.dll
+C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\obj\Debug\net8.0\Todo.App.Model.pdb
+C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\obj\Debug\net8.0\ref\Todo.App.Model.dll

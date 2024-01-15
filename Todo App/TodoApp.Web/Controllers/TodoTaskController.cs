@@ -12,11 +12,37 @@ public class TodoTaskController : Controller
     {
         _unitOfWork = unitOfWork;
     }
-    
-    // GET
-    public IActionResult Index()
+
+    public IActionResult Create()
     {
-        IEnumerable<TodoTask> tasks = _unitOfWork.TodoTask.GetAll();
-        return View(tasks);
+        return View();
+    }
+    
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Create(TodoTask task)
+    {
+        if (!ModelState.IsValid)
+            return RedirectToAction("Index" , "Home");
+        
+        _unitOfWork.TodoTask.Add(task);
+        _unitOfWork.Save();
+        
+        return RedirectToAction("Index" , "Home");
+    }
+    
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Delete(int? id)
+    {
+        TodoTask task = _unitOfWork.TodoTask.GetFirstOrDefault(t => t.Id == id);
+        
+        if (task == null)
+            return RedirectToAction("Index" , "Home");
+        
+        _unitOfWork.TodoTask.Remove(task);
+        _unitOfWork.Save();
+        
+        return RedirectToAction("Index" , "Home");
     }
 }

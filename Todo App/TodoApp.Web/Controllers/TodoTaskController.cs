@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Todo.App.Model.Models;
+using Todo.App.Model.ViewModels;
 using TodoApp.Data.Repository.IRepository;
 
 namespace Todo_App.Controllers;
@@ -15,7 +17,16 @@ public class TodoTaskController : Controller
 
     public IActionResult Create()
     {
-        return View();
+        TodoTaskVM task = new()
+        {
+            Task = new(),
+            CategoryList = _unitOfWork.Category.GetAll().Select(i => new SelectListItem
+            {
+                Text = i.Name,
+                Value = i.Id.ToString()
+            }),
+        };
+        return View(task);
     }
     
     [HttpPost]

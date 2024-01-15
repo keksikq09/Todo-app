@@ -10,3 +10,4 @@ C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\obj\Debug\ne
 C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\obj\Debug\net8.0\refint\Todo.App.Model.dll
 C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\obj\Debug\net8.0\Todo.App.Model.pdb
 C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\obj\Debug\net8.0\ref\Todo.App.Model.dll
+C:\Users\keksikq9\Documents\GitHub\Todo-app\Todo App\Todo.App.Model\obj\Debug\net8.0\Todo.App.Model.csproj.AssemblyReference.cache

@@ -1,4 +1,5 @@
-﻿@model TodoTask
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model Todo.App.Model.ViewModels.TodoTaskVM
 
 <form method="post">
     <div class="border p-3 mt-4">
@@ -8,9 +9,16 @@
         </div>
         @*<div asp-validation-summary="All"></div>*@
         <div class="mb-3">
-            <label asp-for="Name"></label>
-            <input asp-for="Name" class="form-control" />
-            <span asp-validation-for="Name" class="text-danger"></span>
+            <label asp-for="@Model.Task.Name"></label>
+            <input asp-for="@Model.Task.Name" class="form-control" />
+            <span asp-validation-for="@Model.Task.Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3 col-6">
+            <label asp-for="@Model.Task.CategoryId"></label>
+            <select asp-for="@Model.Task.CategoryId" asp-items="@Model.CategoryList" class="form-select">
+                <option disabled selected>--Select Category--</option>
+            </select>
+            <span asp-validation-for="@Model.Task.CategoryId" class="text-danger"></span>
         </div>
         <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
         <a asp-controller="TodoTask" asp-action="Create" class="btn btn-secondary" style="width:150px">

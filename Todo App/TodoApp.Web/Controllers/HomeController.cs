@@ -1,6 +1,4 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Todo_App.Models;
 using Todo.App.Model.Models;
 using TodoApp.Data.Repository.IRepository;
 
@@ -21,11 +19,5 @@ public class HomeController : Controller
     {
         IEnumerable<TodoTask> tasks = _unitOfWork.TodoTask.GetAll(includeProperties:"Category");
         return View(tasks);
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }

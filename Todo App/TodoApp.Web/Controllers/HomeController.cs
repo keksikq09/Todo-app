@@ -19,13 +19,8 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        IEnumerable<TodoTask> tasks = _unitOfWork.TodoTask.GetAll();
+        IEnumerable<TodoTask> tasks = _unitOfWork.TodoTask.GetAll(includeProperties:"Category");
         return View(tasks);
-    }
-
-    public IActionResult Privacy()
-    {
-        return View();
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

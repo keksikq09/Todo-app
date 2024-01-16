@@ -10,7 +10,6 @@ This project is not just a task management platform, but also an opportunity for
 - CRUD Operations: Create, Read, Update, and Delete tasks.
 - Database Interaction: Uses SQL Server.
 - User Interface: Bootstrap for ease of use.
-- Authentication and Authorization: Protecting user data.
 
 ## Technologies
 - ASP.NET Core MVC

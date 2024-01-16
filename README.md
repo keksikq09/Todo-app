@@ -1,33 +1,33 @@
-# ToDo App на ASP.NET Core MVC
+# ToDo App on ASP.NET Core MVC
 
-## Описание
-Добро пожаловать в мой пет-проект ToDo App! Это приложение для управления задачами, разработанное на базе ASP.NET Core MVC. Я создаю этот проект в процессе изучения ASP.NET и стремлюсь применить лучшие практики и техники разработки.
+## Description 
+Welcome to my pet project, the ToDo App! This is a task management application developed using ASP.NET Core MVC. I am creating this project as part of my learning journey in ASP.NET, aiming to implement the best practices and development techniques.
 
-## Цель Проекта
-Этот проект - не только платформа для управления задачами, но и моя возможность углубить знания в ASP.NET Core MVC. Я открыт для любых предложений, рекомендаций и критики, которые помогут мне улучшить мои навыки разработки.
+## Project Goal
+This project is not just a task management platform, but also an opportunity for me to deepen my knowledge in ASP.NET Core MVC. I am open to any suggestions, recommendations, and critiques that will help me improve my development skills.
 
-## Особенности
-- **CRUD операции:** Создание, чтение, обновление и удаление задач.
-- **Работа с базой данных:** Использование SQL Server.
-- **Пользовательский интерфейс:** Bootstrap для удобства использования.
-- **Аутентификация и авторизация:** Защита данных пользователя.
+## Features
+- CRUD Operations: Create, Read, Update, and Delete tasks.
+- Database Interaction: Uses SQL Server.
+- User Interface: Bootstrap for ease of use.
+- Authentication and Authorization: Protecting user data.
 
-## Технологии
+## Technologies
 - ASP.NET Core MVC
 - Entity Framework Core
 - PostgreSQL Server
 - Bootstrap
 - JetBrains Rider
 
-## Начало Работы
-1. Клонируйте репозиторий: `git clone https://github.com/keksikq09/Todo-app.git`.
-2. Откройте решение в Visual Studio.
-3. Настройте строку подключения в `appsettings.json`.
-4. Примените миграции базы данных: `Update-Database` в Package Manager Console.
-5. Запустите приложение.
+## Getting Started
+1. Clone the repository: `git clone https://github.com/keksikq09/Todo-app.git`.
+2. Open the solution in your IDE.
+3. Configure the connection string in `appsettings.json`.
+4. Apply database migrations: `Update-Database` in the Package Manager Console.
+5. Run the application.
 
-## Обратная Связь
-Любая обратная связь, рекомендации по улучшению кода или функциональности приветствуются. Пожалуйста, отправляйте ваши предложения на электронную почту, указанную в моем профиле GitHub.
+## Feedback
+Any feedback, code improvement suggestions, or feature recommendations are welcome. Please send your suggestions to the email address listed in my GitHub profile.
 
-## Лицензия
+## License
 MIT
